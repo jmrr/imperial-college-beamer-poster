@@ -1,0 +1,241 @@
+\documentclass[final]{beamer}
+  \mode<presentation>
+  {\usetheme{ICL}}
+%
+%
+%
+%
+% Files needed are:
+%    beamerposterICL.tex (this file)
+%    beamerthemeICL.sty
+%    ./images/Imperial_2_Pantones.eps (logo)
+%	 posterRefs.bib
+%
+% Personal information that is in the footer is declared in the style file (very bottom of beamerthemeICL.sty).
+%
+% Dimensions are given in cm such that the default of 200x120 = 2m x 1.2m = 78.74in x 47.24 in
+%
+% Compile with
+%    latex filename.tex
+%    dvips filename.dvi -o
+%    ps2pdf filename.ps
+% Alternatively, with PDFLaTeX
+%	 pdflatex -synctex=1 -interaction=nonstopmode filename.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{times}
+\usepackage{amsmath,amssymb}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[orientation=landscape,size=a0]{beamerposter}  % e.g. custom size poster. Change orientation here
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{marvosym}
+\epstopdfsetup{outdir=./images/}
+\usepackage{changepage}
+\usepackage{multicol}
+\setbeamertemplate{caption}[numbered]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Title]{\VeryHuge The title goes here \\ \LARGE Subtitle if desired}
+  \author[Author1Surname \& Author2Surname]{Author1name Author1surname Author2name Author2surname}
+  \institute[Imperial College London]{Research Group, Imperial College London}
+   \date{\date}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}{} 
+\begin{columns}[t]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{column}{.3\linewidth}
+    
+\begin{block}{Introduction}
+
+	This poster template has been developed by Jose Rivera-Rubio @ Imperial College London and uses LaTeX beamer class~\cite{Tantau2004}.
+	
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	\begin{itemize}
+	\item Item 1.
+	\item Item 2.
+	\item Item 3.
+	\end{itemize}	
+	\alert{Lorem ipsum} dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\end{block}
+
+\begin{problockYellow}{A yellow block}
+
+\begin{enumerate}[A.]
+
+\item \textbf{Hypothesis}: 
+
+\item \textbf{Method}: 
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+\item \textbf{Preliminary results}: 
+
+
+\end{enumerate}
+
+\end{problockYellow}
+\end{column}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{column}{.3\linewidth}
+
+\begin{problockBlue}{A blue block}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{columns}[c]
+\column{0.45\textwidth} % It's always good to leave some margin
+
+\begin{figure}[ht]
+\begin{center}
+	\includegraphics[width=\textwidth]{./images/dilbert.jpg}
+	\caption{Example Figure: Dilbert by Scott Adams}
+\end{center}
+\end{figure}
+
+\column{0.45\textwidth}
+\begin{itemize}
+\item \textbf{First item}:
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\item \textbf{Second item}:
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\end{itemize}
+
+\end{columns}
+
+\end{problockBlue}
+
+
+\begin{problockBlue}{Another blue block}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{table}[h]  
+\begin{center}	
+  \begin{tabular}{|c|c|c|c|}
+    \cline{2-4}   
+    \multicolumn{1}{c|}{} & Cat1 & Cat2  & Cat3 \\ \hline
+    Quantity1 (\%) & 48.39  & 42.83 & 4.61\\ \hline
+    Quantity2 (\%) & 3.02 & 21.41 & 9.22 \\ \hline
+    Quantity3 (\%) & 19.81 & 43.50 & 26.83 \\ \hline
+  \end{tabular}
+  \end{center}
+\caption{Sample table.}
+\label{table:sampleTableLabel}
+\end{table}
+
+\end{problockBlue}
+
+\end{column}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{column}{.3\linewidth}
+   
+\begin{problockGreen}{First green block}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{enumerate}
+
+\item Item 1.
+
+\item Item 2.
+
+\item Item 3.
+
+\end{enumerate}
+\end{problockGreen}
+
+
+\begin{problockGreen}{Second green block}
+
+
+% Sample code for blocks inside a block.
+\begin{columns}[t]
+        ~~
+	\begin{column}{.56\linewidth}
+      \begin{block}{Left column}   
+		Stuff goes here.
+	  \end{block}
+    \end{column}
+		~
+	\begin{column}{.4\linewidth}
+      \begin{block}{Right column}   
+		More stuff goes here.
+	  \end{block}
+    \end{column}
+\end{columns}
+
+
+\end{problockGreen}
+
+
+\begin{problockGreen}{Third green block}
+
+Lorem ipsum dolor sit amet, ferri inani probatus his an. Aperiam epicurei nec cu. Ne eius perfecto contentiones nec, liber inermis mel ei. Ex quo noluisse quaestio mediocrem, an has natum praesent. Ne discere blandit quo. Eos iudico quando pericula no, ut fabellas iracundia consectetuer vel.
+
+Ad eum cibo nominati scribentur. Eu ferri efficiendi dissentiunt cum, has in graeco pericula elaboraret. Pri ut graeci dignissim dissentiunt, eirmod audire cotidieque sit ea, ad nostro vivendo pri. Ea amet delectus eos. Mel id commodo verterem phaedrum, velit ignota comprehensam vel ea, usu ut inermis gloriatur expetendis. Saepe labores volumus est et, tollit regione ex pri.
+
+Posse omnium ius ad. Mei ut habeo integre, denique detracto ad quo. Nam et sale electram temporibus, et cum veritus pertinacia, ne solet ubique per. Vis no melius imperdiet philosophia, vim cu wisi porro.
+
+Iuvaret ornatus te pro. Posse meliore alienum no eum, nam no audire reformidans, cu alia imperdiet cum. Cum copiosae mnesarchum necessitatibus te, ea graece persius intellegebat usu. Vix eu vide sale nobis.
+
+Ut splendide constituam qui. Augue aeterno ut pro. Id vix voluptua salutandi. At quis vocent intellegat nam, ei idque graece deseruisse ius. An nec falli nonumes, et dolor inimicus nam, an dicat veniam pro. An has dico solum temporibus.
+
+\end{problockGreen}
+
+\begin{block}{References}
+
+\bibliographystyle{plain}	% (uses file "plain.bst")
+{
+\bibliography{posterRefs}}		% expects file "posterRefs.bib"
+%{\small \bibliography{posterRefs}} % For smaller sized references.
+
+%\setbeamertemplate{bibliography item}[text] % Include if numbering desired in references
+
+%% Version with multicols for the Reference section. Substitute this code for the previous to get a
+%% 2-column version of the reference list. The font is set to be tiny, but can be changed depending on the number
+%% of references.
+%\begin{multicols}{2}
+%\bibliographystyle{plain}	% (uses file "plain.bst")
+%{\tiny
+%\bibliography{posterRefs}}		% expects file "myrefs.bib"
+%\end{multicols}
+
+\end{block}
+
+\end{column}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% !!!!!!!!!!!!!!!    READ ME !
+% Information in the poster footer is declared in the style file. 
+% You must edit beamerthemeICL.sty
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{columns}
+\end{frame}
+\end{document}
+
+

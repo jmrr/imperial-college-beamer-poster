@@ -1,0 +1,232 @@
+%% Mon 3 Jun 2013: This style was created by Jose Rivera-Rubio for using at Imperial College London
+%% Adapted from beamerthemeSMU.sty by Kurt Stein. 
+%% It adds Imperial College graphic identity elements and colour palette, new boxes, standard padding and creates headlines and footers.
+
+%%
+%%    File : beamerthemeICL.cls    (LaTeX2e class file)
+%%    Author : Version 1.0 by Jose Rivera-Rubio (jose.rivera@imperial.ac.uk) 
+%%           
+%% Version : 1.0
+%% Updates : 1.0 [03/06/2013] - initial release.
+%%
+%% This file may be distributed and/or modified
+%%
+%% 1. under the LaTeX Project Public License and/or
+%% 2. under the GNU Public License.
+
+
+\ProvidesPackage{beamerthemeICL} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectcolormodel{cmyk}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Imperial College London custom colours, all based in the corporate palette. If you need more, define the colour using the CMYK below following the colour definitions from http://www3.imperial.ac.uk/graphicidentity/applyingthegraphicidentity/usingthelogo/colourpalette
+%
+
+% COLOR DEFINITIONS
+
+
+% Main blue (i.e. the colours in the logo+b/w)
+\definecolor{icldarkblue}{cmyk}{1,0.61,0,0.45} % ICL DARK BLUE
+\definecolor{icllightblue}{cmyk}{0.5,0.3,0,0.22} % ICL LIGHT BLUE
+\definecolor{black}{HTML}{000000}  % Black: Title in headline
+
+% Other
+\definecolor{iclbrightblue}{cmyk}{.93,0.71,0,0} % ICL BRIGHT BLUE
+\definecolor{icldarkblue2}{cmyk}{1,0.9,0.14,0.05} % ICL DARK BLUE 2
+\definecolor{icllightblue2}{cmyk}{0.38,0.09,0.11,0} % ICL LIGHT BLUE 2
+ 
+\definecolor{iclred}{cmyk}{0.1,0.96,0.96,0}   	 % ICL RED
+\definecolor{iclbrightyellow}{cmyk}{0,0.4,0.95,0} % ICL BRIGHT YELLOW
+\definecolor{icllightyellow}{cmyk}{0.3,0.13,0.64,0} % ICL LIGHT YELLOW
+\definecolor{icldarkgreen}{cmyk}{0.88,0.36,0.93,0.23} % ICL DARK GREEN
+\definecolor{icllightgreen}{cmyk}{0.42,0.11,0.35,0} % ICL LIGHT GREEN
+\definecolor{icllightgray}{RGB}{224,224,224} 
+
+% COLOR USAGE
+
+% headline colors and fonts
+\setbeamercolor{headline}{fg=white,bg=white}
+\setbeamercolor{title in headline}{fg=icldarkblue}
+\setbeamercolor{author in headline}{fg=icllightblue}
+\setbeamercolor{institute in headline}{fg=icllightblue}
+\setbeamercolor{logo in headline}{fg=black,bg=lightgray}
+\setbeamercolor{separation line}{bg=iclred}
+
+% footline colors and fonts
+\setbeamercolor{footline}{fg=icldarkblue,bg=lightgray}
+\setbeamerfont{footline}{fg=white, size=\normalsize}
+
+% body colors and fonts
+\setbeamercolor*{normal text}{fg=black,bg=white}
+
+% block environment
+\setbeamercolor*{block body}{bg=icllightgray!50!white,fg=black}
+\setbeamercolor*{block title}{fg=black,bg=lightgray}
+\setbeamerfont{block title}{size=\large,series=\bf}
+
+% example environment
+\setbeamercolor*{example title}{fg=white,bg=iclred}
+\setbeamerfont{example title}{size=\large,series=\bf,bg=iclred,fg=white}
+
+% alerted text
+\setbeamercolor{alerted text}{fg=iclred}
+%\setbeamercolor{structure}{fg=icllightblue}
+
+%  \setbeamertemplate{itemize/enumerate body begin}{
+%  }
+%  \setbeamertemplate{itemize/enumerate body end}{
+%  }
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[rounded=true,leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[rounded = true,colsep*=.75ex,sep=.75ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%% TEMPLATES TO CREATE COLORED BOCKS
+
+\newenvironment<>{problockGreen}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=icldarkgreen}
+       \setbeamercolor{block body}{fg=black,bg=icllightgreen!20!white}
+       \setbeamercolor{itemize item}{fg=icldarkblue}
+       \setbeamertemplate{itemize item}[triangle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+    
+
+\newenvironment<>{problockYellow}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=iclbrightyellow}
+       \setbeamercolor{block body}{fg=black,bg=icllightyellow!20!white}
+       \setbeamercolor{itemize item}{fg=icldarkblue}
+       \setbeamertemplate{itemize item}[triangle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+    
+    
+\newenvironment<>{problockBlue}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=icldarkblue2}
+       \setbeamercolor{block body}{fg=black,bg=icllightblue2!20!white}
+       \setbeamercolor{itemize item}{fg=icldarkblue}
+       \setbeamertemplate{itemize item}[triangle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+    
+\newenvironment<>{problockRed}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=white,bg=iclred}
+       \setbeamercolor{block body}{fg=black,bg=iclred!20!white}
+       \setbeamercolor{itemize item}{fg=icldarkblue}
+       \setbeamertemplate{itemize item}[triangle]
+     }%
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+	\begin{column}{.02\paperwidth}
+     \end{column}
+    \begin{column}{.20\paperwidth}
+        \vskip2.75cm
+        \begin{center}
+        %This logo size corresponds to an A0 size
+        \includegraphics[width=20cm]{./images/Imperial_2_Pantones.eps}
+       \end{center}
+      \end{column}
+      \begin{column}{.75\paperwidth}
+        %\vskip4ex
+		\vskip2.15cm        
+        \raggedleft
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\VeryHuge{\inserttitle}}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\Large \insertauthor\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\Large{\insertinstitute}\\[1ex]}     
+      \end{column}
+      \begin{column}{.03\paperwidth}
+      \end{column}
+    \end{columns}
+    \vspace{2cm}
+  \end{beamercolorbox}
+  
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{5pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{5pt}
+  \end{beamercolorbox}
+  
+  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{footline}%
+    Imperial College London \hfill Mail: \texttt{john.smith@imperial.ac.uk} \hfill WWW: \texttt{http://www.}
+    \vskip1ex
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{5pt}
+  \end{beamercolorbox}
+}
+
+
+%\addtobeamertemplate{block begin}
+%  {}
+%  {\vspace{1ex plus 0.5ex minus 0.5ex} % Pads top of block
+%     % separates paragraphs in a block
+%   \setlength{\parskip}{24pt plus 1pt minus 1pt}%
+%   \begin{adjustwidth}{2cm}{2cm}
+%}
+%\addtobeamertemplate{block end}
+%  {\end{adjustwidth}%
+%   \vspace{2ex plus 0.5ex minus 0.5ex}}% Pads bottom of block
+%  {\vspace{10ex plus 1ex minus 1ex}} % Seperates blocks from each other
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "poster"
+%%% TeX-PDF-mode: t
+%%% End: 
