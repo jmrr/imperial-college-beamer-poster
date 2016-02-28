@@ -12,8 +12,13 @@ beamerthemeICL.sty
 posterRefs.bib
 ```
 
-Personal information that is in the footer is declared in the style file (very bottom of beamerthemeICL.sty).
+* **Personal information** the personal details in the footer may be declared in the style file (very bottom of beamerthemeICL.sty).
+* **Orientation portrait/landscape** and **size**: This can be changed in preamble line:
 
+```
+\usepackage[orientation=landscape,size=a0]{beamerposter}\usepackage[orientation=portrait,size=a0]{beamerposter}  % e.g. custom size poster. Change orientation here
+
+```
 
 ## Build instructions
 
