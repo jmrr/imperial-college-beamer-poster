@@ -1,0 +1,11 @@
+# Latex-generated files
+*.nav
+*.out
+*.snm
+*.toc
+*.aux
+*.log
+
+# Bibtex
+*.bbl
+*.blg
